@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="dashboard-title">Data Dashboard</h1>
+    </header>
+    <main class="content">
+        <section class="chart">
+            <h2 class="chart-title">Sales Data</h2>
+            <canvas id="salesChart"></canvas>
+        </section>
+        <section class="data-table">
+            <h2 class="table-title">Sales Data Table</h2>
+            <table class="sales-data">
+                <tr>
+                   Month</th>
+                    <th>Sales</th>
+                </tr>
+                <tr>
+                    <td>January</td>
+                    <td>$10,000</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$12,000</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Data Dashboard</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
