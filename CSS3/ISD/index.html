@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="student-dashboard.css">
+</head>
+<body        <h1 class="dashboard-title">Student Dashboard</h1>
+    </header>
+    <main class="content">
+        <section class="assignments">
+            <h2 class="section-title">Assignments</h2>
+            <table class="assignments-table">
+                <tr>
+                    <th>Subject</th>
+                    <th>Assignment</th>
+                    <th>Due Date</th>
+                </tr>
+                <tr>
+                    <td>Math</td>
+                    <td>Algebra Homework</td>
+                    <td>2025-01-25</td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td>Lab Report</td>
+                    <td>2025-01-28</td>
+                </tr>
+            </table>
+        </section>
+        <section class="grades">
+            <h2 class="section-title">Grades</h2>
+            <canvas id="gradesChart"></canvas>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Student Dashboard</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="student-dashboard.js"></script>
+</body>
+</html>
