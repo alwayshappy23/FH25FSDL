@@ -6,16 +6,16 @@
     <title>Styled Table</title>
     <style>
         table {
-            width: 100%;
+            width: 50%;
             border-collapse: collapse;
         }
         th, td {
-            border: 1px solid black;
+            border: 1px solid white;
             padding: 10px;
-            text-align: left;
+            text-align: right;
         }
         th {
-            background-color: #f2f2f2;
+            background-color:greenyellow;
         }
         tr:nth-child(even) {
             background-color: #f9f9f9;
@@ -43,6 +43,10 @@
             <td>Row 3, Cell 1</td>
             <td>Row 3, Cell 2</td>
             <td>Row 3, Cell 3</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">abc</td>
         </tr>
     </table>
 </body>

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var ctx = document.getElementById('gradesChart').getContext('2d');
     var gradesChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: ['Assignment 1', 'Assignment 2', 'Assignment 3'],
             datasets: [{
