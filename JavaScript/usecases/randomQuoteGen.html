@@ -1,0 +1,15 @@
+<p id="quote"></p>
+<button onclick="generateQuote()">Generate Quote</button>
+
+<script>
+let quotes = [
+    "Be the change you wish to see in the world.",
+    "The only limit is your imagination.",
+    "Stay hungry, stay foolish."
+];
+
+function generateQuote() {
+    let randomIndex = Math.floor(Math.random() * quotes.length);
+    document.getElementById("quote").textContent = quotes[randomIndex];
+}
+</script>

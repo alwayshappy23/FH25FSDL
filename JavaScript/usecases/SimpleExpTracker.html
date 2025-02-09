@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="expense" placeholder="Expense">
+<input type="number" id="amount" placeholder="Amount">
+<button onclick="addExpense()">Add Expense</button>
+<p id="total"></p>
+<ul id="expenseList"></ul>
+
+<script>
+let total = 0;
+
+function addExpense() {
+    let expense = document.getElementById("expense").value;
+    let amount = parseFloat(document.getElementById("amount").value);
+
+    if (expense === "" || isNaN(amount)) {
+        alert("Invalid input!");
+        return;
+    }
+
+    total += amount;
+    document.getElementById("total").textContent = "Total: " + total;
+
+    let li = document.createElement("li");
+    li.textContent = expense + ": $" + amount;
+    document.getElementById("expenseList").appendChild(li);
+
+    document.getElementById("expense").value = "";
+    document.getElementById("amount").value = "";
+}
+</script>
+</body>
+</html>

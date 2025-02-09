@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click the Button Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        #game-area {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-top: 20px;
+        }
+        #target-button {
+            position: absolute;
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #score, #timer {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the Button Game</h1>
+    <div id="game-area">
+        <button id="target-button">Click Me!</button>
+    </div>
+    <div id="score">Score: 0</div>
+    <div id="timer">Time Left: 10</div>
+
+    <script>
+        // Game variables
+        let score = 0;
+        let timeLeft = 10;
+        let timer;
+
+        // Get DOM elements
+        const targetButton = document.getElementById("target-button");
+        const scoreDisplay = document.getElementById("score");
+        const timerDisplay = document.getElementById("timer");
+
+        // Function to move the button randomly
+        function moveButton() {
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 200);
+            targetButton.style.left = `${x}px`;
+            targetButton.style.top = `${y}px`;
+        }
+
+        // Function to handle button click
+        targetButton.addEventListener("click", () => {
+            score++;
+            scoreDisplay.textContent = `Score: ${score}`;
+            moveButton();
+        });
+
+        // Function to start the countdown
+        function startTimer() {
+            timer = setInterval(() => {
+                timeLeft--;
+                timerDisplay.textContent = `Time Left: ${timeLeft}`;
+
+                if (timeLeft === 0) {
+                    clearInterval(timer);
+                    targetButton.disabled = true;
+                    alert(`Game Over! Your score is ${score}.`);
+                }
+            }, 1000);
+        }
+
+        // Start the game
+        moveButton();
+        startTimer();
+    </script>
+</body>
+</html>

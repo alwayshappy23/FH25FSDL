@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Who is your favorite superhero?</p>
+<button onclick="vote('Superman')">Superman</button>
+<button onclick="vote('Batman')">Batman</button>
+<button onclick="vote('Spider-Man')">Spider-Man</button>
+<p id="result"></p>
+
+<script>
+let votes = { Superman: 0, Batman: 0, "Spider-Man": 0 };
+
+function vote(option) {
+    votes[option]++;
+    document.getElementById("result").textContent = JSON.stringify(votes);
+}
+</script>
+</body>
+</html>

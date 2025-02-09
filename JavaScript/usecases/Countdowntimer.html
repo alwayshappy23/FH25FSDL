@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="timer">10</p>
+<button onclick="startTimer()">Start Timer</button>
+
+<script>
+function startTimer() {
+    let time = 10;
+    let timer = setInterval(() => {
+        document.getElementById("timer").textContent = time;
+        time--;
+        if (time < 0) {
+            clearInterval(timer);
+            alert("Time's up!");
+        }
+    }, 1000);
+}
+</script>
+</body>
+</html>
