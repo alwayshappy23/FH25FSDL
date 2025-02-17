@@ -20,4 +20,9 @@ export class Restaurant {
       { name: 'Whopper', price: 8 },
       { name: 'Cheeseburger', price: 5 },
     ]),
+    new Restaurant('Bhagat Tarachand', [
+      { name: 'Veg Thali', price: 25 },
+      { name: 'Spl Thali', price: 30 },
+      
+    ]),
   ];
